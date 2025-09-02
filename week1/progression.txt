@@ -1,0 +1,8 @@
+นี่คือโจทย์ที่บอกว่าให้สร้างobject ที่เก็บค่าสัตว์เลี้ยง โดยจะสร้าง objectชื่่อ pets
+ข้างในมีการเก็บ key กับ value ชื่อ catโดยที่cat เองก็เป็น object อีกทีเป็น object 
+ซ้อน object ในนี้มี 2 property คือ
+1. name: "mongkol" value เป็นstring ธรรมดา
+2. hello: function() { return "Hello" }  value เป็น function
+mothod สามารถเก็บเป็น valueได้เพราะใน js functionเป็นfirst class citizen
+วิธีเข้าถึง console.log(pets.cat.hello()); ไปที่object pets แล้วเข้า cat แล้วเข้า function hello 
+เพื่อ return hello
