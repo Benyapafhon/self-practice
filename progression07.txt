@@ -1,0 +1,36 @@
+innerHTML แสดงโค้ดhtmlแบบโต้งๆ ดิบๆ โชว์หมดรวมแท็ก
+innerText แสดงแค่เฉพาะข้อความ ไม่เอา hidddenมาโชว์
+textContent แสดงข้อความทั้งหมด เอาที่ซ่อนมาด้วย
+
+let div = document.getElementById("demo"); //เอาid=demo
+console.log(div.innerHTML);
+console.log(div.innerText);
+console.log(div.textContent);
+
+//1. append <p> under <div id="demo">
+let p = document.createElement("p");
+div.appendChild(p);
+สร้างp เปล่าๆแล้วเอาid="demo"แปะเข้าไป
+
+//1.5 add format='italic' attribute to <p>
+p.setAttribute("format", "italic"); 
+เพิ่มattribute ให้มัน format="italic"
+
+//2. try to add three different text types
+//2.1 add <i>Sample Italic Text</i> with innerHTML
+let p1 = document.createElement("p");
+p1.innerHTML = "<i>Sample Italic Text</i>";
+div.appendChild(p1);
+ใช้innerHTML บนหน้าเว็บเลยจะเห็น ข้อความเอียง
+
+//2.2 add <i>Sample Italic Text</i> with innerText
+let p2 = document.createElement("p");
+p2.innerText = "<i>Sample Italic Text</i>";
+div.appendChild(p2);
+ใช้innerText จะเอา <i>มา <i>Sample Italic Text</i>
+
+//2.3 add <i>Sample Italic Text</i> with textContent
+let p3 = document.createElement("p");
+p3.textContent = "<i>Sample Italic Text</i>";
+div.appendChild(p3);
+ใช้textContent <i>Sample Italic Text</i>
